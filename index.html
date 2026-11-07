@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>BoardGameArena — Dataset</title>
-  <meta name="description" content="Explore and download the 900-question BoardGameArena public dataset across five board games.">
+  <title>BoardGameArena — test-mini dataset</title>
+  <meta name="description" content="Explore the BoardGameArena test-mini dataset with one example from each of 45 subsets.">
   <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./assets/style.css">
   <script src="./assets/app.js" defer></script>
@@ -16,25 +16,25 @@
   </div></header>
   <main class="container">
     <section class="hero" aria-labelledby="title">
-      <div class="hero-copy"><p class="eyebrow"><span></span> PUBLIC DATASET</p>
+      <div class="hero-copy"><p class="eyebrow"><span></span> TEST-MINI DATASET</p>
         <h1 id="title">A move beyond<br>the obvious.</h1>
-        <p class="intro">Explore 900 board-game reasoning questions<br class="desktop-break"> across five games, three tasks, and three reasoning types.</p>
-        <div class="hero-actions"><a class="button primary" href="./data/boardgamearena-900.zip" download>Download dataset <span aria-hidden="true">↓</span></a><a class="text-link" href="#dataset">Browse questions <span aria-hidden="true">↗</span></a></div>
-        <p class="download-note">900 questions · 45 JSONL subsets · Metadata mapping included</p>
+        <p class="intro">Explore board-game reasoning questions<br class="desktop-break"> across five games, three tasks, and three reasoning types.</p>
+        <div class="hero-actions"><a class="button primary" href="./data/test-mini-dataset.zip" download>Download test-mini dataset <span aria-hidden="true">↓</span></a><a class="text-link" href="#dataset">Browse examples <span aria-hidden="true">↗</span></a></div>
+        <p class="download-note">45 JSONL subsets · Metadata mapping included</p>
       </div>
       <div class="hero-art" aria-hidden="true"><div class="board-grid"><span class="piece one">♞</span><span class="piece two">●</span><span class="piece three">●</span><span class="piece four">♟</span></div><span class="art-coordinate c1">a</span><span class="art-coordinate c2">h</span><span class="art-coordinate c3">8</span><span class="art-coordinate c4">1</span><div class="art-label">EVERY MOVE, A QUESTION.</div></div>
     </section>
-    <div class="dataset-stats" aria-label="Dataset composition"><div><strong>900</strong><span>Questions</span></div><div><strong>05</strong><span>Board games</span></div><div><strong>03</strong><span>Task types</span></div><div><strong>03</strong><span>Reasoning types</span></div><div><strong>45</strong><span>Subsets · 20 questions each</span></div></div>
+    <div class="dataset-stats" aria-label="Dataset composition"><div><strong>05</strong><span>Board games</span></div><div><strong>03</strong><span>Task types</span></div><div><strong>03</strong><span>Reasoning types</span></div><div><strong>45</strong><span>Subsets</span></div></div>
     <section id="dataset" aria-labelledby="explore-title">
-      <div class="section-heading"><div><p class="eyebrow muted">THE COLLECTION</p><h2 id="explore-title">Explore the dataset</h2></div><a class="text-link small" href="./data/boardgamearena-900.jsonl" download>Download JSONL <span aria-hidden="true">↓</span></a></div>
+      <div class="section-heading"><div><p class="eyebrow muted">DATASET PREVIEW</p><h2 id="explore-title">Explore the subsets</h2><p class="preview-note">One example from each of the 45 subsets.</p></div><a class="text-link small" href="./data/test-mini-dataset.jsonl" download>Download JSONL <span aria-hidden="true">↓</span></a></div>
       <div class="game-tabs" role="group" aria-label="Filter by game">
-        <button type="button" data-game="all" aria-pressed="true">All games <span>900</span></button><button type="button" data-game="chess" aria-pressed="false">Chess</button><button type="button" data-game="xiangqi" aria-pressed="false">Xiangqi</button><button type="button" data-game="gomoku" aria-pressed="false">Gomoku</button><button type="button" data-game="othello" aria-pressed="false">Othello</button><button type="button" data-game="checker" aria-pressed="false">Checkers</button>
+        <button type="button" data-game="all" aria-pressed="true">All games</button><button type="button" data-game="chess" aria-pressed="false">Chess</button><button type="button" data-game="xiangqi" aria-pressed="false">Xiangqi</button><button type="button" data-game="gomoku" aria-pressed="false">Gomoku</button><button type="button" data-game="othello" aria-pressed="false">Othello</button><button type="button" data-game="checker" aria-pressed="false">Checkers</button>
       </div>
-      <div class="filters"><label class="search-box"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Search questions or IDs" aria-label="Search questions or IDs"></label><label class="select-box"><span>Task</span><select id="task"><option value="all">All tasks</option><option value="move_legality">Move legality</option><option value="best_move">Best move</option><option value="tactic_strategy">Tactics & strategy</option></select></label><label class="select-box"><span>Reasoning</span><select id="reasoning"><option value="all">All reasoning</option><option value="deductive">Deductive</option><option value="inductive">Inductive</option><option value="abductive">Abductive</option></select></label><button type="button" id="reset" class="reset">Reset</button></div>
-      <div class="collection-info"><p id="count" role="status" aria-live="polite">Loading questions…</p><span>Question preview</span></div>
+      <div class="filters"><label class="search-box"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Search examples or IDs" aria-label="Search examples or IDs"></label><label class="select-box"><span>Task</span><select id="task"><option value="all">All tasks</option><option value="move_legality">Move legality</option><option value="best_move">Best move</option><option value="tactic_strategy">Tactics & strategy</option></select></label><label class="select-box"><span>Reasoning</span><select id="reasoning"><option value="all">All reasoning</option><option value="deductive">Deductive</option><option value="inductive">Inductive</option><option value="abductive">Abductive</option></select></label><button type="button" id="reset" class="reset">Reset</button></div>
+      <div class="collection-info"><p id="count" role="status" aria-live="polite">Loading examples…</p><span>Example preview</span></div>
       <div class="explorer"><div class="question-index"><div id="questions" class="question-list"></div><div class="pagination"><button type="button" id="previous" aria-label="Previous page">←</button><span id="page-count"></span><button type="button" id="next" aria-label="Next page">→</button></div></div><article id="question-detail" class="question-detail" aria-label="Selected question"><div class="empty-state">Loading dataset…</div></article></div>
-      <noscript><p>Enable JavaScript to browse the questions. You can also <a href="./data/boardgamearena-900.zip" download>download all 900 questions</a>.</p></noscript>
+      <noscript><p>Enable JavaScript to browse the examples. You can also <a href="./data/test-mini-dataset.zip" download>download the test-mini dataset</a>.</p></noscript>
     </section>
   </main>
-  <footer class="container"><span>BoardGameArena</span><span>Public dataset · 900 questions</span><a href="#title">Back to top ↑</a></footer>
+  <footer class="container"><span>BoardGameArena</span><span>test-mini dataset</span><a href="#title">Back to top ↑</a></footer>
 </body></html>
